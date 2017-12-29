@@ -1,0 +1,45 @@
+﻿<div class="p-10" style="border: 1px solid gray; background-color: gray;"><strong style="color: white;">Thread Name</strong></div>
+<div style="border-left: 1px solid black; border-right: 1px solid black;">
+    <div style="border-bottom: 1px solid black; overflow: auto;">
+        <div class="col-sm-2" style="border-right: 1px solid lightgray;">
+            <div class="text-center">
+                Salsao
+                <br />
+                24/10/2017 05:41
+            </div>
+        </div>
+        <div class="col-sm-8 pt-5">User post</div>
+    </div>
+    <div style="border-bottom: 1px solid black; overflow: auto; background-color: lightgray">
+        <div class="col-sm-2" style="border-right: 1px solid lightgray;">
+            <div class="text-center">
+                Salsao
+                <br />
+                24/10/2017 05:41
+            </div>
+        </div>
+        <div class="col-sm-8 pt-5">User post</div>
+    </div>
+    <div style="border-bottom: 1px solid black; overflow: auto;">
+        <div class="col-sm-2" style="border-right: 1px solid lightgray;">
+            <div class="text-center">
+                Salsao
+                <br />
+                24/10/2017 05:41
+            </div>
+        </div>
+        <div class="col-sm-8 pt-5">User post</div>
+    </div>
+</div>
+<div class="mt-10">
+    <button ng-if="!vm.showReply" class="btn btn-default" ng-click="vm.showReply = true">Post Reply</button>
+    <form ng-if="vm.showReply">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input id="title" class="form-control" type="text" />
+            <label for="post">Post</label>
+            <textarea id="post" rows="7" class="form-control"></textarea>
+        </div>
+        <button class="btn btn-default">Post</button>
+    </form>
+</div>
