@@ -15,7 +15,7 @@
             },
             {
                 name: 'thread',
-                url: '/threads/{id}',
+                url: '/threads/{id}/{title}',
                 component: 'threadComponent'
             },
             {

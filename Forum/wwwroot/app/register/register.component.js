@@ -13,14 +13,28 @@
 
     registerController.$inject = [
         '$log',
-        'toastr',
-        '$stateParams'
+        '$stateParams',
+        'apiRegister'
     ];
 
-    function registerController($log, toastr, $stateParams) {
+    function registerController($log, $stateParams, apiRegister) {
         var vm = this;
 
+        console.log('piru');
+
+        vm.registerUser = registerUser;
+
+        function registerUser(user) {
+            $log.info('wowowwo');
+            apiRegister
+                .post(user)
+                .then((success) => {
+                    $log.info('wow');
+                });
+        }
+
         function activate() {
+            console.log('active');
         }
 
         this.$onInit = activate;

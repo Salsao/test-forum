@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 mt-20">
-                <h1 class="mt-0">Forum</h1>
+                <h1 class="mt-0"><a class="link-forum" ui-sref="threads">Forum</a></h1>
                 <div class="p-5 br-5 mb-10" style="background-color: gray;">
                     <button class="btn btn-default" ui-sref="register">Register</button>
                     <form class="form-inline pull-right">
@@ -31,10 +31,6 @@
                     </form>
                 </div>
                 <ui-view></ui-view>
-                <div class="mt-10">
-                    <button class="btn btn-default" ui-sref="thread({ id: 1 })">Thread</button>
-                    <button class="btn btn-default" ui-sref="newThread">New Thread</button>
-                </div>
                 <footer class="mt-10">
                     <span class="ml-15">Developed in December 2017</span>
                     <span class="pull-right mr-15">Developed by Eduardo Sára Pereira</span>

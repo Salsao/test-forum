@@ -13,14 +13,24 @@
 
     threadsController.$inject = [
         '$log',
-        'toastr',
-        '$stateParams'
+        '$stateParams',
+        'apiThreads'
     ];
 
-    function threadsController($log, toastr, $stateParams) {
+    function threadsController($log, $stateParams, apiThreads) {
         var vm = this;
 
+        function getThreads() {
+            apiThreads
+                .threads
+                .get()
+                .then((success) => {
+                    vm.threads = success.data;
+                });
+        }
+
         function activate() {
+            getThreads();
         }
 
         this.$onInit = activate;

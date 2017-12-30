@@ -8,18 +8,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td class="col-md-8"><a ui-sref="register">Title 1</a></td>
-            <td class="col-md-1" style="text-align: center;"><a href="javascript: void(0);">Jorge</a></td>
-            <td class="col-md-1" style="text-align: center;">Today</td>
-            <td class="col-md-1" style="text-align: center;">2</td>
-        </tr>
-        <tr>
-            <td class="col-md-8">Title 2</td>
-            <td class="col-md-1" style="text-align: center;">John</td>
-            <td class="col-md-1" style="text-align: center;">Today</td>
-            <td class="col-md-1" style="text-align: center;">0</td>
+        <tr ng-repeat="thread in vm.threads">
+            <td class="col-md-8"><a ui-sref="thread({ id: thread.id, title: thread.title })">{{::thread.title}}</a></td>
+            <td class="col-md-1" style="text-align: center;">{{::thread.userId}}</td>
+            <td class="col-md-1" style="text-align: center;">{{::thread.dateCreated | date: 'dd/MM/yyyy - HH:mm'}}</td>
+            <td class="col-md-1" style="text-align: center;">{{::thread.id}}</td>
         </tr>
     </tbody>
 </table>
-<button class="btn btn-default">Post New Thread</button>
+<button class="btn btn-default" ui-sref="newThread">Post New Thread</button>

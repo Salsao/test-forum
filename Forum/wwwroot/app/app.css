@@ -63,3 +63,13 @@ footer {
     font-style: italic;
     color: lightgray;
 }
+
+.ng-submitted .ng-invalid,
+.ng-dirty.ng-invalid {
+    border-color: #ff7b76 !important;
+}
+
+.link-forum {
+    color: black !important;
+    text-decoration: none !important;
+}

@@ -18,6 +18,7 @@
     "Forum": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "http://localhost:57797/?#!/threads",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

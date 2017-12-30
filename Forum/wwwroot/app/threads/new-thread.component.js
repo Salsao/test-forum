@@ -13,12 +13,24 @@
 
     newThreadController.$inject = [
         '$log',
-        'toastr',
-        '$stateParams'
+        '$state',
+        '$stateParams',
+        'apiThreads'
     ];
 
-    function newThreadController($log, toastr, $stateParams) {
+    function newThreadController($log, $state, $stateParams, apiThreads) {
         var vm = this;
+
+        vm.createThread = createThread;
+
+        function createThread(newThread) {
+            apiThreads
+                .threads
+                .post(newThread)
+                .then((success) => {
+                    $state.go('thread', { id: success.data });
+                });
+        }
 
         function activate() {
         }
